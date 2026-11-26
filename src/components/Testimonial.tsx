@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 interface TestimonialProps {
   quote: string;
   author?: string;
