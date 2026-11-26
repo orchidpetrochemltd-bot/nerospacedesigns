@@ -1,0 +1,120 @@
+export const siteConfig = {
+  name: "NEROSPACE DESIGNS",
+  description: "Interior architecture, spatial planning and bespoke design for considered living.",
+  url: "https://nerospace.designs",
+  email: "nerospacedesigns@gmail.com",
+  phone: "+234 704 823 6782",
+  location: "The Carpenter, 6th Ave, Gwarinpa, Abuja, Federal Capital Territory",
+  social: {
+    instagram: "https://instagram.com/nerospacedesigns",
+    pinterest: "https://pinterest.com/nerospacedesigns",
+    whatsapp: "https://wa.me/2347048236782",
+    tiktok: "https://tiktok.com/@nerospacedesigns",
+    twitter: "https://x.com/nerospacedesigns",
+    facebook: "https://facebook.com/nerospacedesigns",
+  },
+  ogImage: "/images/backgrounds/bg-01.jpeg",
+};
+
+export const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/projects", label: "Projects" },
+  { href: "/process", label: "Process" },
+  { href: "/contact", label: "Contact" },
+];
+
+export const servicesHeading = {
+  eyebrow: "What We Do",
+  title: "Our Services",
+  subtitle:
+    "From concept to completion, we offer a comprehensive suite of design services tailored to your unique vision.",
+};
+
+export const processHeading = {
+  eyebrow: "How We Work",
+  title: "Our Process",
+  subtitle:
+    "A structured approach to creating spaces that inspire and endure.",
+};
+
+export const services = [
+  {
+    id: "01",
+    title: "CONSULTATION & SITE ASSESSMENT",
+    description:
+      "We begin with a thorough understanding of your space, lifestyle, and aspirations. Our initial consultation establishes the foundation for a design that is both functional and deeply personal.",
+    image: "/images/services/consultation.jpg",
+  },
+  {
+    id: "02",
+    title: "INTERIOR DESIGN & SPACE PLANNING",
+    description:
+      "Through spatial analysis and thoughtful layouts, we craft environments that flow naturally. Every room is considered as part of a cohesive whole, balancing aesthetics with everyday usability.",
+    image: "/images/services/space-planning.jpg",
+  },
+  {
+    id: "03",
+    title: "3D DESIGN & VISUALIZATION",
+    description:
+      "Before a single wall is moved, you will see your space come to life. Our photorealistic visualizations ensure complete clarity and confidence in the design direction.",
+    image: "/images/services/3d-visualization.jpg",
+  },
+  {
+    id: "04",
+    title: "TECHNICAL DRAWINGS",
+    description:
+      "Precision in execution is non-negotiable. We produce detailed technical documentation that guides contractors and craftspeople to realize the design exactly as intended.",
+    image: "/images/services/technical-drawings.jpg",
+  },
+  {
+    id: "05",
+    title: "FURNITURE & CUSTOM DESIGN",
+    description:
+      "From curated pieces to fully bespoke furniture, we source and design elements that are unique to your space. Each item is selected or created to enhance the overall narrative of the home.",
+    image: "/images/services/furniture.jpg",
+  },
+];
+
+export const processSteps = [
+  {
+    id: "01",
+    title: "DISCOVER",
+    description:
+      "We listen, observe, and ask the right questions. This phase is about understanding your needs, your lifestyle, and the unique character of your space.",
+  },
+  {
+    id: "02",
+    title: "DEFINE",
+    description:
+      "Ideas take shape. We establish the design direction, material palette, and spatial strategy that will guide the project forward.",
+  },
+  {
+    id: "03",
+    title: "DESIGN",
+    description:
+      "Concepts become detailed plans. From floor layouts to furniture specifications, every element is carefully considered and documented.",
+  },
+  {
+    id: "04",
+    title: "DELIVER",
+    description:
+      "The vision becomes reality. We oversee the execution, ensuring every detail is implemented to the highest standard.",
+  },
+];
+
+export const testimonials = [
+  {
+    quote:
+      "NEROSPACE UNDERSTOOD HOW WE WANTED THE SPACE TO FEEL BEFORE WE EVEN KNEW HOW TO DESCRIBE IT.",
+    role: "Private Residence, Lagos",
+  },
+];
+
+export const galleryImages = [
+  "/images/gallery/1.jpg",
+  "/images/gallery/2.jpg",
+  "/images/gallery/3.jpg",
+  "/images/gallery/4.jpg",
+];

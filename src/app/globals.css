@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-coffee-dark: #3A291C;
+  --color-coffee-deep: #3A291C;
+  --color-beige-light: #F0E6DB;
+  --color-beige-warm: #D1BFAD;
+  --color-beige-medium: #D1BFAD;
+  --color-coffee-accent: #3A291C;
+  --color-coffee-muted: #3A291C;
+  --font-heading: var(--font-cormorant-garamond);
+  --font-body: var(--font-cormorant-garamond);
+  --font-display: var(--font-cinzel);
+  --font-sweet-sans: "Anton", Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  --font-halogen: "Halogen", "Anton", Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  --ease-seamless: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Stop iOS Safari from inflating text when rotating to landscape */
+  -webkit-text-size-adjust: 100%;
+  /* No grey flash on tap (Android Chrome / iOS Safari) */
+  -webkit-tap-highlight-color: transparent;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-beige-light);
+  color: var(--color-coffee-dark);
+  font-family: var(--font-body), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+/* every motion on the site shares one seamless curve */
+a,
+button,
+img,
+video {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+main {
+  transform: translateZ(0);
+}
+
+.font-heading {
+  font-family: var(--font-heading), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Cinzel", "Cormorant Garamond", Georgia, serif;
+}
+
+::selection {
+  background-color: var(--color-coffee-accent);
+  color: var(--color-beige-light);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-beige-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-coffee-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coffee-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-sharp-image {
+  background-size: contain;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .hero-sharp-image {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-fadeUp {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+
+.animate-fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity;
+}
+

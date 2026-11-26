@@ -1,0 +1,42 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+interface SectionHeadingProps {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  center?: boolean;
+}
+
+export default function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+  center = false,
+}: SectionHeadingProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
+      className={cn("mb-12 md:mb-16", center ? "text-center" : "text-left")}
+    >
+      {eyebrow && (
+        <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-coffee-accent mb-4 font-semibold">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-coffee-dark leading-[1.1] mb-4 md:mb-6 font-bold uppercase">
+        {title}
+      </h2>
+      {subtitle && (
+        <p className={cn("text-sm md:text-base text-coffee-dark/70 max-w-2xl leading-relaxed font-heading", center && "mx-auto")}>
+          {subtitle}
+        </p>
+      )}
+    </motion.div>
+  );
+}
